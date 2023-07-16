@@ -1,0 +1,16 @@
+syntax = "proto3";
+package iskander.tabaev.grpc;
+
+import "google/protobuf/empty.proto";
+
+message CrewInfoResponse {
+  string coffeeSort = 1;
+  string originCountry = 2;
+  float beginWeight = 3;
+  float endWeight = 4;
+  int64 crewNumber = 5;
+}
+
+service CrewInfoService {
+  rpc crewInfo(google.protobuf.Empty) returns (CrewInfoResponse);
+}
